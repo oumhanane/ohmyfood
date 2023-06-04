@@ -44,7 +44,7 @@ h4 {
 }
 h2 {
     font-size: 24px;  
-    font-weight: 700;
+    font-weight:bolder;
     padding-top: 40px;
     padding-left: 15px;
 }
@@ -98,20 +98,42 @@ h2 {
     
 }
 .restaurants {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: $restaurantBackground;
     & a {
-        border-radius: 20px;
-        background-color: white;
-        text-decoration: none;
-        color: black;
-        margin-top: 15px;
-        width: 90%;
+        // border-radius: 20px;
+        // background-color: white;
+        // text-decoration: none;
+        // color: black;
+        // margin-top: 15px;
+        // width: 90%;
     }
         & img {
             width: 100%;
-            padding-top: 25px;
+            height: 231px;
+            padding-bottom: 30px;
             border-top-left-radius: 20px;
             border-top-right-radius: 20px;
+            object-fit: cover;
         }
+}
+.cardRestaurant {
+    // @include center;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    // align-items: center;
+    width: 90%;
+    background-color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    color: black;
+    margin-top: 15px;
+}
+.cardContent {
+    display: flex;
 }
 
