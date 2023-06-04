@@ -52,18 +52,17 @@ table {
   border-spacing: 0;
 }
 
-.logo {
-  font-weight: 400;
-  font-size: 30px;
-  font-family: shrikhand, sans-serif;
-  line-height: 44px;
-  text-align: center;
-  color: red;
-}
-
 header img {
   width: 10rem;
-  padding: 1.3rem 0;
+  padding: 10px 0 0 0;
+}
+
+.header {
+  font-family: Shrikhand, sans-serif;
+  font-size: 30px;
+  font-weight: bolder;
+  text-align: center;
+  margin-top: 20px;
 }
 
 *, ::before, ::after {
@@ -77,5 +76,120 @@ body {
 .main-container {
   width: 100%;
   max-width: 767.98px;
-  padding: 0 50px;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 17px;
+}
+
+.rechercheRestau {
+  background-color: #D2D2D2;
+  padding-bottom: 45px;
+}
+
+.recherche {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #EAEAEA;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  margin-top: 15px;
+}
+
+.recherche i {
+  padding-right: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.decouverteRestau {
+  font-size: 15px;
+  padding-top: 10px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+  padding-top: 40px;
+  padding-left: 15px;
+}
+
+.reserver {
+  text-align: center;
+}
+
+.button_rechercheRestaurant {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.button_rechercheRestaurant button {
+  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border: none;
+  border-radius: 25px;
+  padding: 13px;
+  color: white;
+}
+
+.fonctionnement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.fonctionnementBouton {
+  width: 90%;
+  background: #F7F7F7;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  border: none;
+  padding: 13px;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+.fonctionnementBouton i {
+  padding-right: 8px;
+}
+
+.fonctionnementBouton:first-child {
+  margin-top: 25px;
+}
+
+.bouton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  width: 7%;
+  background-color: #9356DC;
+  color: white;
+  padding: 2px;
+}
+
+.restaurants {
+  background-color: #D2D2D2;
+}
+.restaurants a {
+  border-radius: 20px;
+  background-color: white;
+  text-decoration: none;
+  color: black;
+  margin-top: 15px;
+  width: 90%;
+}
+.restaurants img {
+  width: 100%;
+  padding-top: 25px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }/*# sourceMappingURL=style.css.map */

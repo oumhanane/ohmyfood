@@ -12,22 +12,106 @@ body {
 .main-container {
     width: 100%;
     max-width: 767.98px;
-    padding: 0 50px;
+    // padding: 0 50px;
+}
+h3 {
+    font-size: 18px;
+    font-weight: 700;
+}
+h4 {
+    font-size: 17px;
+}
+.rechercheRestau {
+    background-color: $restaurantBackground;
+    padding-bottom: 45px;
+}
+.recherche {
+    @include center;
+    background-color: $rechercheBackground;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    margin-top: 15px;
+
+}
+.recherche i {
+    padding-right: 15px;   
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.decouverteRestau {
+    font-size: 15px;
+    padding-top: 10px;
+    text-align: center;
+}
+h2 {
+    font-size: 24px;  
+    font-weight: 700;
+    padding-top: 40px;
+    padding-left: 15px;
+}
+.reserver {
+    text-align: center;
+}
+.button_rechercheRestaurant {
+    @include center;  
+    margin-top: 30px; 
+
+    & button {
+    background: $buttonGradient;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border: none;
+    border-radius: 25px;
+    padding: 13px;
+    color: white;
+    }
+}
+.fonctionnement {
+    @include center;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+.fonctionnementBouton { 
+    width: 90%;
+    background: $buttonFonctionnement;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    border: none;
+    padding: 13px;
+    margin-bottom: 15px;
+    font-size: 16px;
+        & i {
+            padding-right: 8px;
+        }
+        
+}
+.fonctionnementBouton:first-child {
+   margin-top: 25px; 
 }
 
-//header
-
-
-
-// .logo {
-//     font-weight: 400;
-//     font-size: 30px;
-//     font-family: shrikhand,sans-serif;
-//     line-height: 44px;
-//     text-align: center;
-//     color: red;
-
-// }
-
-//
+.bouton {
+    @include center;
+    border-radius: 100%;
+    width: 7%;
+    background-color: $couleurFonctionnement;
+    color: white;
+    padding: 2px;
+    
+}
+.restaurants {
+    background-color: $restaurantBackground;
+    & a {
+        border-radius: 20px;
+        background-color: white;
+        text-decoration: none;
+        color: black;
+        margin-top: 15px;
+        width: 90%;
+    }
+        & img {
+            width: 100%;
+            padding-top: 25px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+}
 
