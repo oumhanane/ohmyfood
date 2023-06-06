@@ -75,7 +75,6 @@ body {
 
 .main-container {
   width: 100%;
-  max-width: 767.98px;
 }
 
 h3 {
@@ -85,10 +84,11 @@ h3 {
 
 h4 {
   font-size: 17px;
+  margin-top: 10px;
 }
 
 .rechercheRestau {
-  background-color: #D2D2D2;
+  background-color: #F5F5F5;
   padding-bottom: 45px;
 }
 
@@ -99,6 +99,9 @@ h4 {
   background-color: #EAEAEA;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   margin-top: 15px;
+}
+.recherche p {
+  font-weight: 600;
 }
 
 .recherche i {
@@ -124,6 +127,14 @@ h2 {
   text-align: center;
 }
 
+.fonctionnement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .button_rechercheRestaurant {
   display: flex;
   justify-content: center;
@@ -139,14 +150,6 @@ h2 {
   color: white;
 }
 
-.fonctionnement {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
 .fonctionnementBouton {
   width: 90%;
   background: #F7F7F7;
@@ -156,24 +159,33 @@ h2 {
   padding: 13px;
   margin-bottom: 15px;
   font-size: 16px;
+  position: relative;
 }
 .fonctionnementBouton i {
   padding-right: 8px;
+  color: #9356DC;
 }
 
 .fonctionnementBouton:first-child {
   margin-top: 25px;
 }
 
-.bouton {
+.numero-bouton {
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 100%;
-  width: 7%;
-  background-color: #9356DC;
+  width: 1.5em;
+  height: 1.5em;
+  background: #9356DC;
   color: white;
   padding: 2px;
+  position: absolute;
+  left: -10px;
+}
+
+.titre-restaurants {
+  background-color: #F5F5F5;
 }
 
 .restaurants {
@@ -181,7 +193,7 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #D2D2D2;
+  background-color: #F5F5F5;
 }
 .restaurants img {
   width: 100%;
@@ -193,7 +205,7 @@ h2 {
      object-fit: cover;
 }
 
-.cardRestaurant {
+.card-restaurant {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -203,8 +215,38 @@ h2 {
   text-decoration: none;
   color: black;
   margin-top: 15px;
+  padding-bottom: 20px;
+}
+.card-restaurant img {
+  padding-bottom: 10px;
 }
 
 .cardContent {
   display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  position: relative;
+}
+.cardContent i {
+  align-items: flex-end;
+}
+.cardContent .icon-heart {
+  position: absolute;
+  right: 1em;
+  font-size: 1.5em;
+}
+
+.fas {
+  opacity: 0;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.fas:hover {
+  opacity: 1;
+  transform: scale(1.1);
+  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
 }/*# sourceMappingURL=style.css.map */
