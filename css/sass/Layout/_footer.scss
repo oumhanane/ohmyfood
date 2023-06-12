@@ -1,0 +1,31 @@
+@import '../Utils/_variables';
+
+.container-footer {
+    display: flex;
+    flex-direction: column;
+    background-color: $background-footer;
+    color: $couleur-footer;
+    padding-left: 30px;
+    padding-bottom: 20px;
+    & .logo-footer {
+        font-family: shrikhand,sans-serif;
+        font-weight: 400;
+        font-style: italic;
+        font-size: 18px;
+        padding-top: 30px;
+    }
+        & .fa-solid {
+            padding-right: 15px ;
+        }
+        & a {
+            text-decoration: none;
+            color: $couleur-footer;
+            font-size: 16px;
+        }
+}
+.lien-proposer-restaurant {
+    margin-top: 1.5em;
+}
+.lien-devenir-partenaire, .lien-mentions-legales, .lien-contact {
+    margin-top: 0.9em;
+}

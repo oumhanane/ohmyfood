@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: roboto, sans-serif;
+    font-family: Roboto, sans-serif;
 }
 
 .main-container {
@@ -25,6 +25,7 @@ h4 {
 }
 .recherche {
     @include center;
+    height: 3em;
     background-color: $recherche-background;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
     margin-top: 15px;
@@ -55,7 +56,6 @@ h2 {
 .fonctionnement {
     @include center;
     flex-direction: column;
-    justify-content: space-between;
     
 }
 .button_rechercheRestaurant {
@@ -72,23 +72,33 @@ h2 {
     }
 }
 
-.fonctionnementBouton { 
+.fonctionnement-bouton { 
+    display: flex;
     width: 90%;
     background: $button-fonctionnement;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
     border: none;
-    padding: 13px;
+    padding: 25px 20px;
     margin-bottom: 15px;
     font-size: 16px;
+    font-weight: 600;
     position: relative;
         & i {
-            padding-right: 8px;
-            color: $couleur-fonctionnement;
-        }       
+            padding-right: 20px;
+            padding-left: 10px;
+            color: $couleur-icone;
+        }
+            & i:hover {
+                cursor: pointer;
+                color: $couleur-fonctionnement;
+            }       
 }
-.fonctionnementBouton:first-child {
+.fonctionnement-bouton:first-child {
    margin-top: 25px; 
+}
+.choix-fonctionnement {
+    text-align: start
 }
 
 .numero-bouton {
@@ -104,6 +114,8 @@ h2 {
 }
 .titre-restaurants {
     background-color: $restaurant-background;
+    margin-top: 30px;
+    margin-left: 5px;
 }
 .restaurants {
     display: flex;
@@ -121,21 +133,31 @@ h2 {
         }
 }
 .card-restaurant {
-    // @include center;
     display: flex;
     flex-direction: column;
     justify-content:center;
-    // align-items: center;
     width: 90%;
     background-color: white;
     border-radius: 20px;
     text-decoration: none;
-    color: black;
     margin-top: 15px;
     padding-bottom: 20px;
-    & img {
-        padding-bottom: 10px;
-    }
+    color: black;
+        & img {
+        padding-bottom: 20px;
+        position: relative;
+        }
+            & .restaurants-nouveau {   
+                @include center;          
+                border: solid 2px transparent;             
+                background-color: $couleur-background-nouveau;
+                position: absolute;
+                bottom: -100px;
+                width: 5em;
+                height: 1.8em;
+                right: 30px;
+                color: $couleur-nouveau;
+            }
 }
 .cardContent {
     display: flex;
@@ -159,6 +181,7 @@ h2 {
         opacity: 1;
         transform: scale(1.1);
         @include linearGradient;
+        background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         -moz-background-clip: text;
