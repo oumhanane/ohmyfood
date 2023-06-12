@@ -1,0 +1,44 @@
+@import "./sass/_main.scss";
+
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+}
+.main-container {
+    width: 100%;
+}
+.photo-restaurant {
+    width: 100%;
+    margin-top: 10px;
+}
+.menu {
+    background-color: $fonctionnementBackground;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    & .titre {
+        font-family: 'Shrikhand';
+        font-style: italic;
+        font-weight: 400;
+        font-size: 24px;
+        text-align: center;
+        padding-top: 25px;
+    }
+        & .icone {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+            margin-bottom: 25px;
+        }
+            & .icon-heart {
+                font-size: 1.4em;
+            }
+}
+h2 {
+    text-transform: uppercase;
+    border-bottom: 2px solid $couleur-background-nouveau;
+    display: inline-block;
+
+}
