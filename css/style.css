@@ -177,13 +177,13 @@ h2 {
   flex-direction: column;
 }
 
-.button_rechercheRestaurant {
+.bouton_rechercheRestaurant {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 30px;
 }
-.button_rechercheRestaurant button {
+.bouton_rechercheRestaurant button {
   background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   border: none;
