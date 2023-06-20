@@ -105,6 +105,30 @@ header img {
   font-weight: 400;
 }
 
+/****** Media queries ***********/
+@media (min-width: 767.98px) {
+  .container-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+  }
+  .logo-footer {
+    order: 4;
+  }
+  a .lien-contact {
+    margin-right: -50px;
+  }
+  a .lien-mentions-legales {
+    margin-right: -60px;
+  }
+  a .lien-devenir-partenaire {
+    margin-right: -90px;
+  }
+  a .lien-proposer-restaurant {
+    margin-right: -90px;
+  }
+}
 *, ::before, ::after {
   box-sizing: border-box;
 }
@@ -274,10 +298,10 @@ h2 {
   margin-top: 15px;
   padding-bottom: 20px;
   color: black;
+  position: relative;
 }
 .card-restaurant img {
   padding-bottom: 20px;
-  position: relative;
 }
 .card-restaurant .restaurants-nouveau {
   display: flex;
@@ -286,7 +310,7 @@ h2 {
   border: solid 2px transparent;
   background-color: #99E2D0;
   position: absolute;
-  bottom: -100px;
+  top: 10px;
   width: 5em;
   height: 1.8em;
   right: 30px;
@@ -322,4 +346,40 @@ h2 {
   -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
+}
+
+/****** Media queries ***********/
+@media (min-width: 767.98px) {
+  .reserver {
+    font-size: 40px;
+  }
+  .decouverteRestau {
+    margin-top: 25px;
+    font-size: 18px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  .fonctionnement {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 25px;
+  }
+  .fonctionnement .fonctionnement-bouton {
+    width: 30%;
+  }
+  .fonctionnement-bouton:first-child {
+    margin-top: 0;
+  }
+  .restaurants {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .restaurants .card-restaurant {
+    width: 45%;
+  }
 }/*# sourceMappingURL=style.css.map */

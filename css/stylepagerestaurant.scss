@@ -7,6 +7,18 @@
 body {
     font-family: Roboto, sans-serif;
 }
+.header-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    & .header {
+        margin-right: 40px;
+    }
+        & .fa-solid {
+            padding-top: 20px;
+            margin-left: -20px; 
+        }   
+}
 .main-container {
     width: 100%;
     margin-top: 10px;
@@ -18,9 +30,7 @@ body {
 .menu {
     background-color: $button-fonctionnement;
     padding-left: 5px;
-    padding-right: 5px;
-    // border-top-left-radius: 15px;
-    // border-top-right-radius: 15px;
+    padding-right: 5px; 
     & .titre {
         font-family: 'Shrikhand';
         font-style: italic;
@@ -29,14 +39,31 @@ body {
         text-align: center;
         padding-top: 25px;
     }
-        & .icone {
-            display: flex;
-            justify-content: space-around;
-            align-items: flex-end;
-        }
-            & .icon-heart {
-                font-size: 1.4em;
+}
+.icone {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    position: relative;
+        & .icon-heart {
+            position: absolute;
+            font-size: 1.4em;
             }
+        }
+.fas {
+    opacity: 0;
+    transition: 0.3s;
+    cursor: pointer;
+    &:hover {
+        opacity: 1;
+        transform: scale(1.1);
+        @include linearGradient;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
+    }
 }
 h2 {
     text-transform: uppercase;
@@ -49,7 +76,7 @@ h2 {
     display: flex;
     flex-direction: column;
     width: 100%;
-    background: $button-fonctionnement;
+    background: white;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);  
     border-radius: 15px;
     border: none;
@@ -58,7 +85,7 @@ h2 {
     font-size: 16px;
     font-weight: 600;
     & .plat {
-        font-weight: 500;
+        font-weight: 600;
         font-size: 15px;
     }
         & .details-plat {
@@ -80,12 +107,16 @@ h2 {
     margin-top: 30px; 
 
     & button {
-    background: $button-gradient;
+    background: $button-commander;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     border: none;
     border-radius: 25px;
-    padding: 13px;
+    padding: 15px 45px;
     color: white;
-    font-weight: 500;
+    font-weight: 600;
+    // background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
     }
+}
+.container-footer {
+    margin-top: 35px;
 }

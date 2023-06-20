@@ -35,3 +35,30 @@
 .lien-mentions-legales, .lien-contact {
     font-weight: 400;
 }
+
+
+/****** Media queries ***********/
+// version desktop
+@media (min-width: 767.98px) {
+    .container-footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-end;
+    }
+    .logo-footer {
+        order: 4;
+    }
+    a .lien-contact {
+        margin-right: -50px;
+    }
+    a .lien-mentions-legales {
+        margin-right: -60px;
+    }
+    a .lien-devenir-partenaire {
+        margin-right: -90px;
+    }
+    a .lien-proposer-restaurant {
+        margin-right: -90px;
+    }
+}

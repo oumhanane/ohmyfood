@@ -105,12 +105,49 @@ header img {
   font-weight: 400;
 }
 
+/****** Media queries ***********/
+@media (min-width: 767.98px) {
+  .container-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+  }
+  .logo-footer {
+    order: 4;
+  }
+  a .lien-contact {
+    margin-right: -50px;
+  }
+  a .lien-mentions-legales {
+    margin-right: -60px;
+  }
+  a .lien-devenir-partenaire {
+    margin-right: -90px;
+  }
+  a .lien-proposer-restaurant {
+    margin-right: -90px;
+  }
+}
 *, ::before, ::after {
   box-sizing: border-box;
 }
 
 body {
   font-family: Roboto, sans-serif;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.header-container .header {
+  margin-right: 40px;
+}
+.header-container .fa-solid {
+  padding-top: 20px;
+  margin-left: -20px;
 }
 
 .main-container {
@@ -136,13 +173,32 @@ body {
   text-align: center;
   padding-top: 25px;
 }
-.menu .icone {
+
+.icone {
   display: flex;
   justify-content: space-around;
   align-items: flex-end;
+  position: relative;
 }
-.menu .icon-heart {
+.icone .icon-heart {
+  position: absolute;
   font-size: 1.4em;
+}
+
+.fas {
+  opacity: 0;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.fas:hover {
+  opacity: 1;
+  transform: scale(1.1);
+  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
 }
 
 h2 {
@@ -157,7 +213,7 @@ h2 {
   display: flex;
   flex-direction: column;
   width: 100%;
-  background: #F7F7F7;
+  background: white;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
   border: none;
@@ -167,7 +223,7 @@ h2 {
   font-weight: 600;
 }
 .menu-bouton .plat {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 15px;
 }
 .menu-bouton .details-plat {
@@ -192,11 +248,15 @@ h2 {
   margin-top: 30px;
 }
 .bouton_commander button {
-  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   border: none;
   border-radius: 25px;
-  padding: 13px;
+  padding: 15px 45px;
   color: white;
-  font-weight: 500;
+  font-weight: 600;
+}
+
+.container-footer {
+  margin-top: 35px;
 }/*# sourceMappingURL=stylepagerestaurant.css.map */
