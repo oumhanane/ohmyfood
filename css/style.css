@@ -110,23 +110,25 @@ header img {
   .container-footer {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-end;
+    justify-content: flex-end;
+    align-items: baseline;
+    padding-top: 25px;
   }
   .logo-footer {
     order: 4;
+    padding-right: 70px;
   }
-  a .lien-contact {
-    margin-right: -50px;
+  .lien-contact {
+    padding-right: 50px;
   }
-  a .lien-mentions-legales {
-    margin-right: -60px;
+  .lien-mentions-legales {
+    padding-right: 25px;
   }
-  a .lien-devenir-partenaire {
-    margin-right: -90px;
+  .lien-devenir-partenaire {
+    margin-right: 45px;
   }
-  a .lien-proposer-restaurant {
-    margin-right: -90px;
+  .lien-proposer-restaurant {
+    padding-right: 20px;
   }
 }
 *, ::before, ::after {
@@ -215,6 +217,11 @@ h2 {
   padding: 13px;
   color: white;
   font-weight: 500;
+}
+.bouton_rechercheRestaurant button:hover {
+  background: linear-gradient(185.64deg, #9356DC -10.2%, #FF79DA 129.74%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
 
 .fonctionnement-bouton {

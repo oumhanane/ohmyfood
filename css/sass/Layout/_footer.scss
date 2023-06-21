@@ -38,27 +38,29 @@
 
 
 /****** Media queries ***********/
-// version desktop
+// version desktop et tablette
 @media (min-width: 767.98px) {
     .container-footer {
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
-        align-items: flex-end;
+        justify-content: flex-end;
+        align-items: baseline;
+        padding-top: 25px;
     }
     .logo-footer {
         order: 4;
+        padding-right: 70px;
     }
-    a .lien-contact {
-        margin-right: -50px;
+    .lien-contact {
+        padding-right: 50px;
     }
-    a .lien-mentions-legales {
-        margin-right: -60px;
+    .lien-mentions-legales {
+        padding-right: 25px;
     }
-    a .lien-devenir-partenaire {
-        margin-right: -90px;
+    .lien-devenir-partenaire {
+        margin-right: 45px;
     }
-    a .lien-proposer-restaurant {
-        margin-right: -90px;
+    .lien-proposer-restaurant {
+        padding-right: 20px;
     }
 }

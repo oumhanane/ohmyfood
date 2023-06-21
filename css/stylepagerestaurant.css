@@ -110,23 +110,25 @@ header img {
   .container-footer {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-end;
+    justify-content: flex-end;
+    align-items: baseline;
+    padding-top: 25px;
   }
   .logo-footer {
     order: 4;
+    padding-right: 70px;
   }
-  a .lien-contact {
-    margin-right: -50px;
+  .lien-contact {
+    padding-right: 50px;
   }
-  a .lien-mentions-legales {
-    margin-right: -60px;
+  .lien-mentions-legales {
+    padding-right: 25px;
   }
-  a .lien-devenir-partenaire {
-    margin-right: -90px;
+  .lien-devenir-partenaire {
+    margin-right: 45px;
   }
-  a .lien-proposer-restaurant {
-    margin-right: -90px;
+  .lien-proposer-restaurant {
+    padding-right: 20px;
   }
 }
 *, ::before, ::after {
@@ -157,6 +159,9 @@ body {
 
 .photo-restaurant {
   width: 100%;
+  height: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin-top: 10px;
 }
 
@@ -256,7 +261,51 @@ h2 {
   color: white;
   font-weight: 600;
 }
+.bouton_commander button:hover {
+  background: linear-gradient(185.64deg, #9356DC -10.2%, #FF79DA 129.74%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
 
 .container-footer {
   margin-top: 35px;
+}
+
+/****** Media queries ***********/
+@media (min-width: 767.98px) {
+  .header-container {
+    display: flex;
+    justify-content: center;
+  }
+  .header-container .fa-solid {
+    margin-left: -350px;
+  }
+  .header-container .header {
+    margin-right: 0px;
+  }
+  .photo-restaurant {
+    position: relative;
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin-left: 90px;
+    position: absolute;
+    top: 350px;
+    z-index: 1;
+  }
+  .bouton_commander {
+    margin-bottom: 35px;
+  }
+  h2 {
+    margin-left: -500px;
+  }
+  .menu-bouton {
+    width: 70%;
+  }
+  .container-footer {
+    margin-top: 0;
+  }
 }/*# sourceMappingURL=stylepagerestaurant.css.map */
