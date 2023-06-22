@@ -7,18 +7,6 @@
 body {
     font-family: Roboto, sans-serif;
 }
-.header-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    & .header {
-        margin-right: 40px;
-    }
-        & .fa-solid {
-            padding-top: 20px;
-            margin-left: -20px; 
-        }   
-}
 .main-container {
     width: 100%;
     margin-top: 10px;
@@ -40,13 +28,19 @@ body {
         font-size: 24px;
         text-align: center;
         padding-top: 25px;
+        padding-left: 10px;
     }
+}
+.titre-icone {
+    display: flex;
+    justify-content: space-between;
 }
 .icone {
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
     position: relative;
+    margin-right: 25px;
         & .icon-heart {
             position: absolute;
             font-size: 1.4em;
@@ -69,10 +63,16 @@ body {
 }
 h2 {
     text-transform: uppercase;
-    border-bottom: 2px solid $couleur-background-nouveau;
+    // border-bottom: 2px solid $couleur-background-nouveau;
     display: inline-block;
     margin-left: 5px;
     margin-top: 40px;
+}
+.line::after {
+    content:" ";
+    display: block;
+    border: solid 2px $couleur-background-nouveau;
+    width: 40px;
 }
 .menu-bouton {
     display: flex;
@@ -107,6 +107,7 @@ h2 {
 .bouton_commander {
     @include center;  
     margin-top: 30px; 
+    padding-bottom: 35px;
 
     & button {
     background: $button-commander;
@@ -123,35 +124,23 @@ h2 {
             cursor: pointer;
         }
 }
-.container-footer {
-    margin-top: 35px;
-}
 
 /****** Media queries ***********/
 // version desktop et tablette
 @media (min-width: 767.98px) {
-    .header-container {
-        display: flex;
-        justify-content: center;
-        & .fa-solid {
-            margin-left: -350px; 
-        }  
-            & .header {
-                margin-right: 0px;
-            } 
-    }
-    .photo-restaurant {
-        position: relative;
-    }
     .menu {
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 80%;
+        transform: translateY(-50px);
         margin-left: 90px;
-        position: absolute;
-        top: 350px;
-        z-index: 1;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        // z-index: 1;
+        & .icone {
+            padding-left: 35px;
+        }
     }
     .bouton_commander {
         margin-bottom: 35px;

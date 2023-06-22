@@ -52,6 +52,22 @@ table {
   border-spacing: 0;
 }
 
+.header-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.header-container .header {
+  margin-right: 40px;
+}
+.header-container .fleche-retour {
+  text-decoration: none;
+}
+.header-container .fa-solid {
+  padding-top: 20px;
+  margin-left: -20px;
+}
+
 header img {
   width: 10rem;
   padding: 10px 0 0 0;
@@ -65,6 +81,18 @@ header img {
   margin-top: 20px;
 }
 
+@media (min-width: 767.98px) {
+  .header-container {
+    display: flex;
+    justify-content: center;
+  }
+  .header-container .fa-solid {
+    margin-left: -350px;
+  }
+  .header-container .header {
+    margin-right: 0px;
+  }
+}
 .container-footer {
   display: flex;
   flex-direction: column;
@@ -139,19 +167,6 @@ body {
   font-family: Roboto, sans-serif;
 }
 
-.header-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.header-container .header {
-  margin-right: 40px;
-}
-.header-container .fa-solid {
-  padding-top: 20px;
-  margin-left: -20px;
-}
-
 .main-container {
   width: 100%;
   margin-top: 10px;
@@ -177,6 +192,12 @@ body {
   font-size: 24px;
   text-align: center;
   padding-top: 25px;
+  padding-left: 10px;
+}
+
+.titre-icone {
+  display: flex;
+  justify-content: space-between;
 }
 
 .icone {
@@ -184,6 +205,7 @@ body {
   justify-content: space-around;
   align-items: flex-end;
   position: relative;
+  margin-right: 25px;
 }
 .icone .icon-heart {
   position: absolute;
@@ -208,10 +230,16 @@ body {
 
 h2 {
   text-transform: uppercase;
-  border-bottom: 2px solid #99E2D0;
   display: inline-block;
   margin-left: 5px;
   margin-top: 40px;
+}
+
+.line::after {
+  content: " ";
+  display: block;
+  border: solid 2px #99E2D0;
+  width: 40px;
 }
 
 .menu-bouton {
@@ -251,6 +279,7 @@ h2 {
   justify-content: center;
   align-items: center;
   margin-top: 30px;
+  padding-bottom: 35px;
 }
 .bouton_commander button {
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
@@ -267,34 +296,20 @@ h2 {
   cursor: pointer;
 }
 
-.container-footer {
-  margin-top: 35px;
-}
-
 /****** Media queries ***********/
 @media (min-width: 767.98px) {
-  .header-container {
-    display: flex;
-    justify-content: center;
-  }
-  .header-container .fa-solid {
-    margin-left: -350px;
-  }
-  .header-container .header {
-    margin-right: 0px;
-  }
-  .photo-restaurant {
-    position: relative;
-  }
   .menu {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 80%;
+    transform: translateY(-50px);
     margin-left: 90px;
-    position: absolute;
-    top: 350px;
-    z-index: 1;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+  }
+  .menu .icone {
+    padding-left: 35px;
   }
   .bouton_commander {
     margin-bottom: 35px;

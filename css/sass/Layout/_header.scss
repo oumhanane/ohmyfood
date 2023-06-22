@@ -1,3 +1,18 @@
+.header-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    & .header {
+        margin-right: 40px;
+    }
+        & .fleche-retour {
+            text-decoration: none;
+        }
+            & .fa-solid {
+                padding-top: 20px;
+                margin-left: -20px; 
+            }   
+}
 header img {
     width: 10rem;
     padding: 10px 0 0 0;
@@ -8,5 +23,18 @@ header img {
     font-weight: 400;
     text-align: center;
     margin-top: 20px;
+}
+
+@media (min-width: 767.98px) {
+    .header-container {
+        display: flex;
+        justify-content: center;
+        & .fa-solid {
+            margin-left: -350px; 
+        }  
+            & .header {
+                margin-right: 0px;
+            } 
+    }
 }
 

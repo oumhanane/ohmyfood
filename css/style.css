@@ -52,6 +52,22 @@ table {
   border-spacing: 0;
 }
 
+.header-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.header-container .header {
+  margin-right: 40px;
+}
+.header-container .fleche-retour {
+  text-decoration: none;
+}
+.header-container .fa-solid {
+  padding-top: 20px;
+  margin-left: -20px;
+}
+
 header img {
   width: 10rem;
   padding: 10px 0 0 0;
@@ -65,6 +81,18 @@ header img {
   margin-top: 20px;
 }
 
+@media (min-width: 767.98px) {
+  .header-container {
+    display: flex;
+    justify-content: center;
+  }
+  .header-container .fa-solid {
+    margin-left: -350px;
+  }
+  .header-container .header {
+    margin-right: 0px;
+  }
+}
 .container-footer {
   display: flex;
   flex-direction: column;
