@@ -171,6 +171,63 @@ body {
   width: 100%;
 }
 
+.loader-container {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: loader 3s linear forwards;
+  pointer-events: none;
+}
+
+.element {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+
+.element1 {
+  animation: loader infinite 0.3s alternate;
+  background: #9356DC;
+}
+
+.element2 {
+  animation: loader infinite 0.3s 0.05s alternate;
+  background: #FF79DA;
+}
+
+.element3 {
+  animation: loader infinite 0.3s 0.1s alternate;
+  background: #008766;
+}
+
+@keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+@keyframes loader-element {
+  100% {
+    transform: translateY(-30px);
+  }
+}
 h3 {
   font-size: 18px;
   font-weight: 700;
@@ -247,7 +304,7 @@ h2 {
   font-weight: 500;
 }
 .bouton_rechercheRestaurant button:hover {
-  background: linear-gradient(185.64deg, #9356DC -10.2%, #FF79DA 129.74%);
+  background: linear-gradient(185.64deg, #a476dc -10.2%, #fbace4 129.74%);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
   cursor: pointer;
 }
