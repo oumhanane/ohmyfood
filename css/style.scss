@@ -24,26 +24,26 @@ body {
     animation: loader 3s linear forwards;
     pointer-events: none;
   }
-  .element {
+.element {
     width: 25px;
     height: 25px;
     border-radius: 50%;
     margin: 0 10px;
-  }
-  .element1 {
+}
+.element1 {
     animation: loader infinite 0.3s alternate;
     background: $couleur-fonctionnement;
-  }
-  .element2 {
+}
+.element2 {
     animation: loader infinite 0.3s 0.05s alternate;
     background: #FF79DA;
-  }
-  .element3 {
+}
+.element3 {
     animation: loader infinite 0.3s 0.1s alternate;
     background: $couleur-nouveau;
-  }
+}
 
- @keyframes loader {
+@keyframes loader {
     0% {
       opacity: 1;
     }
@@ -57,13 +57,13 @@ body {
       opacity: 0;
       display: none;
     }
-  }
+}
   
-  @keyframes loader-element {
+@keyframes loader-element {
     100% {
       transform: translateY(-30px);
     }
-  }
+}
   
 h3 {
     font-size: 18px;

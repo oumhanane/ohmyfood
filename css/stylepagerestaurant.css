@@ -60,9 +60,6 @@ table {
 .header-container .header {
   margin-right: 40px;
 }
-.header-container .fleche-retour {
-  text-decoration: none;
-}
 .header-container .fa-solid {
   padding-top: 20px;
   margin-left: -20px;
@@ -87,10 +84,15 @@ header img {
     justify-content: center;
   }
   .header-container .fa-solid {
-    margin-left: -350px;
+    margin-left: -100px;
   }
   .header-container .header {
     margin-right: 0px;
+  }
+}
+@media (min-width: 1024px) {
+  .header-container .fa-solid {
+    margin-left: -390px;
   }
 }
 .container-footer {
@@ -174,7 +176,7 @@ body {
 
 .photo-restaurant {
   width: 100%;
-  height: 350px;
+  height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
   margin-top: 10px;
@@ -184,12 +186,23 @@ body {
   background-color: #F7F7F7;
   padding-left: 5px;
   padding-right: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  transform: translateY(-50px);
+  margin-left: 15px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+.menu .icone {
+  padding-left: 35px;
 }
 .menu .titre {
   font-family: "Shrikhand";
   font-style: italic;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 20px;
   text-align: center;
   padding-top: 25px;
   padding-left: 10px;
@@ -230,9 +243,8 @@ body {
 
 h2 {
   text-transform: uppercase;
-  display: inline-block;
-  margin-left: 5px;
   margin-top: 40px;
+  padding-right: 200px;
 }
 
 .line::after {
@@ -261,7 +273,7 @@ h2 {
 }
 .menu-bouton .details-plat {
   font-weight: 300;
-  font-size: 13.5px;
+  font-size: 12px;
 }
 .menu-bouton .prix {
   font-weight: 700;
@@ -274,6 +286,26 @@ h2 {
   padding-top: 10px;
 }
 
+.menu-entrees {
+  animation: fadein 3s ease-in-out;
+}
+
+.menu-plats {
+  animation: fadein 6s ease-in-out;
+}
+
+.menu-desserts {
+  animation: fadein 9s ease-in-out;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .bouton_commander {
   display: flex;
   justify-content: center;
@@ -311,16 +343,37 @@ h2 {
   .menu .icone {
     padding-left: 35px;
   }
+  .menu-details {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    transform: translateY(-50px);
+    margin-left: 150px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    margin-top: 60px;
+  }
+  .menu-details .icone {
+    padding-left: 35px;
+  }
   .bouton_commander {
     margin-bottom: 35px;
+    padding-right: 180px;
+    margin-top: 50px;
   }
   h2 {
-    margin-left: -500px;
+    padding-right: 350px;
   }
   .menu-bouton {
     width: 70%;
   }
   .container-footer {
     margin-top: 0;
+  }
+}
+/****** Media queries ***********/
+@media (min-width: 1024px) {
+  h2 {
+    padding-right: 500px;
   }
 }/*# sourceMappingURL=stylepagerestaurant.css.map */

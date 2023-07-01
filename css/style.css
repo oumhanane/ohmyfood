@@ -60,9 +60,6 @@ table {
 .header-container .header {
   margin-right: 40px;
 }
-.header-container .fleche-retour {
-  text-decoration: none;
-}
 .header-container .fa-solid {
   padding-top: 20px;
   margin-left: -20px;
@@ -87,10 +84,15 @@ header img {
     justify-content: center;
   }
   .header-container .fa-solid {
-    margin-left: -350px;
+    margin-left: -100px;
   }
   .header-container .header {
     margin-right: 0px;
+  }
+}
+@media (min-width: 1024px) {
+  .header-container .fa-solid {
+    margin-left: -390px;
   }
 }
 .container-footer {
