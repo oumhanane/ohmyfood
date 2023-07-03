@@ -6,7 +6,8 @@
     background-color: $background-footer;
     color: $couleur-footer;
     padding-left: 30px;
-    padding-bottom: 20px;
+    padding-bottom: 70px;
+    margin-top: -50px;;
     & .logo-footer {
         font-family: shrikhand,sans-serif;
         font-weight: 400;
@@ -46,6 +47,9 @@
         justify-content: flex-end;
         align-items: baseline;
         padding-top: 25px;
+        // transform: translateY(-50px);
+        margin-top: 20px;
+        padding-top: 0;
     }
     .logo-footer {
         order: 4;

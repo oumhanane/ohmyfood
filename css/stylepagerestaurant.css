@@ -101,7 +101,8 @@ header img {
   background-color: #353535;
   color: #FFFFFF;
   padding-left: 30px;
-  padding-bottom: 20px;
+  padding-bottom: 70px;
+  margin-top: -50px;
 }
 .container-footer .logo-footer {
   font-family: shrikhand, sans-serif;
@@ -143,6 +144,8 @@ header img {
     justify-content: flex-end;
     align-items: baseline;
     padding-top: 25px;
+    margin-top: 20px;
+    padding-top: 0;
   }
   .logo-footer {
     order: 4;
@@ -255,27 +258,74 @@ h2 {
 }
 
 .menu-bouton {
+  width: 95%;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  background: white;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
   border-radius: 15px;
-  border: none;
-  padding: 10px 10px;
-  margin-top: 10px;
-  font-size: 16px;
-  font-weight: 600;
+  margin: 10px 0;
+  margin-right: 0;
+  padding: 10px;
+  box-shadow: 4px 4px 6px #aaa;
+  position: relative;
+  cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  transition: padding-right 450ms ease-in-out;
 }
-.menu-bouton .plat {
+.menu-bouton:hover {
+  padding-right: 75px;
+}
+.menu-bouton:hover .check {
+  opacity: 1;
+  transform: translate(-50px);
+}
+.menu-bouton:hover .fa-check-circle {
+  transform: rotate(360deg);
+}
+.menu-bouton .check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  width: 50px;
+  height: 63px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  position: absolute;
+  padding: 20px;
+  right: -50px;
+  top: 0;
+  opacity: 0;
+  transition: transform 330ms ease-in-out;
+}
+.menu-bouton .check .fa-check-circle {
+  color: #fff;
+  transition: transform 500ms ease-in-out;
+}
+
+.details-plat {
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.plat {
   font-weight: 600;
   font-size: 15px;
 }
-.menu-bouton .details-plat {
+
+.details-plat {
   font-weight: 300;
   font-size: 12px;
 }
-.menu-bouton .prix {
+
+.prix {
   font-weight: 700;
   font-size: 13px;
 }
@@ -331,27 +381,13 @@ h2 {
 /****** Media queries ***********/
 @media (min-width: 767.98px) {
   .menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     width: 80%;
-    transform: translateY(-50px);
-    margin-left: 90px;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-  }
-  .menu .icone {
-    padding-left: 35px;
+    margin-left: 75px;
   }
   .menu-details {
     display: flex;
     flex-direction: column;
     width: 80%;
-    transform: translateY(-50px);
-    margin-left: 150px;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    margin-top: 60px;
   }
   .menu-details .icone {
     padding-left: 35px;
@@ -361,11 +397,59 @@ h2 {
     padding-right: 180px;
     margin-top: 50px;
   }
+  .bouton_commander button {
+    margin-left: 170px;
+  }
   h2 {
     padding-right: 350px;
   }
   .menu-bouton {
-    width: 70%;
+    width: 90%;
+    background-color: #fff;
+    border-radius: 15px;
+    margin: 10px;
+    margin-right: 0;
+    padding: 10px;
+    box-shadow: 4px 4px 6px #aaa;
+    position: relative;
+    cursor: pointer;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    transition: padding-right 450ms ease-in-out;
+  }
+  .menu-bouton:hover {
+    padding-right: 75px;
+  }
+  .menu-bouton:hover .check {
+    opacity: 1;
+    transform: translate(-50px);
+  }
+  .menu-bouton:hover .fa-check-circle {
+    transform: rotate(360deg);
+  }
+  .menu-bouton .check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #99E2D0;
+    width: 50px;
+    height: 63px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    position: absolute;
+    padding: 20px;
+    right: -50px;
+    top: 0;
+    opacity: 0;
+    transition: transform 330ms ease-in-out;
+  }
+  .menu-bouton .check .fa-check-circle {
+    color: #fff;
+    transition: transform 500ms ease-in-out;
   }
   .container-footer {
     margin-top: 0;
@@ -375,5 +459,8 @@ h2 {
 @media (min-width: 1024px) {
   h2 {
     padding-right: 500px;
+  }
+  .bouton_commander button {
+    margin-left: 200px;
   }
 }/*# sourceMappingURL=stylepagerestaurant.css.map */

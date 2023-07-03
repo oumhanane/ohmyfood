@@ -101,7 +101,8 @@ header img {
   background-color: #353535;
   color: #FFFFFF;
   padding-left: 30px;
-  padding-bottom: 20px;
+  padding-bottom: 70px;
+  margin-top: -50px;
 }
 .container-footer .logo-footer {
   font-family: shrikhand, sans-serif;
@@ -143,6 +144,8 @@ header img {
     justify-content: flex-end;
     align-items: baseline;
     padding-top: 25px;
+    margin-top: 20px;
+    padding-top: 0;
   }
   .logo-footer {
     order: 4;
