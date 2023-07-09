@@ -52,6 +52,39 @@ table {
   border-spacing: 0;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+@keyframes loader-element {
+  100% {
+    transform: translateY(-30px);
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .header-container {
   display: flex;
   justify-content: space-around;
@@ -194,7 +227,7 @@ body {
   align-items: center;
   width: 90%;
   transform: translateY(-50px);
-  margin-left: 15px;
+  margin: auto;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
 }
@@ -236,7 +269,7 @@ body {
 .fas:hover {
   opacity: 1;
   transform: scale(1.1);
-  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  color: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -258,9 +291,9 @@ h2 {
 }
 
 .menu-bouton {
-  width: 95%;
   display: flex;
   flex-direction: column;
+  width: 95%;
   background-color: #fff;
   border-radius: 15px;
   margin: 10px 0;
@@ -285,9 +318,6 @@ h2 {
   transform: rotate(360deg);
 }
 .menu-bouton .check {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -348,14 +378,6 @@ h2 {
   animation: fadein 9s ease-in-out;
 }
 
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 .bouton_commander {
   display: flex;
   justify-content: center;
@@ -382,9 +404,10 @@ h2 {
 @media (min-width: 767.98px) {
   .menu {
     width: 80%;
-    margin-left: 75px;
   }
   .menu-details {
+    display: flex;
+    flex-direction: column;
     display: flex;
     flex-direction: column;
     width: 80%;
@@ -429,9 +452,6 @@ h2 {
     transform: rotate(360deg);
   }
   .menu-bouton .check {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     display: flex;
     justify-content: center;
     align-items: center;

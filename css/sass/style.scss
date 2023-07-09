@@ -1,4 +1,5 @@
-@import "./sass/_main.scss";
+// @import "./sass/_main.scss";
+@import "_main.scss";
 
 *, ::before, ::after {
     box-sizing: border-box;
@@ -11,6 +12,7 @@ body {
     width: 100%;
 }
 .loader-container {
+    @include center;
     position: fixed;
     height: 100%;
     width: 100%;
@@ -18,12 +20,9 @@ body {
     top: 0;
     background-color: rgba(255, 255, 255, 0.90);
     z-index: 10000;
-    display: flex;
-    justify-content:center;
-    align-items:center;
     animation: loader 3s linear forwards;
     pointer-events: none;
-  }
+}
 .element {
     width: 25px;
     height: 25px;
@@ -42,29 +41,6 @@ body {
     animation: loader infinite 0.3s 0.1s alternate;
     background: $couleur-nouveau;
 }
-
-@keyframes loader {
-    0% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 1;
-    }
-    90% {
-        opacity: 0.9;
-      }
-    100% {
-      opacity: 0;
-      display: none;
-    }
-}
-  
-@keyframes loader-element {
-    100% {
-      transform: translateY(-30px);
-    }
-}
-  
 h3 {
     font-size: 18px;
     font-weight: 700;
@@ -87,7 +63,6 @@ h4 {
     & p {
         font-weight: 500;
     }
-
 }
 .recherche i {
     padding-right: 15px;   
@@ -111,8 +86,7 @@ h2 {
 }
 .fonctionnement {
     @include center;
-    flex-direction: column;
-    
+    flex-direction: column;   
 }
 .bouton_rechercheRestaurant {
     @include center;  
@@ -132,7 +106,6 @@ h2 {
             cursor: pointer;
         }
 }
-
 .fonctionnement-bouton { 
     display: flex;
     width: 90%;
@@ -162,7 +135,6 @@ h2 {
     text-align: start;
     font-weight: 600;
 }
-
 .numero-bouton {
     @include center;
     border-radius: 100%;
@@ -180,10 +152,12 @@ h2 {
     padding-left: 20px;
 }
 .restaurants {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include center;
+    @include column;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
     background-color: $restaurant-background;
     padding-bottom: 60px;
         & img {
@@ -196,9 +170,10 @@ h2 {
         }
 }
 .card-restaurant {
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
+    @include column;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content:center;
     width: 90%;
     background-color: white;
     border-radius: 20px;
@@ -209,7 +184,6 @@ h2 {
     position: relative;
         & img {
         padding-bottom: 20px;
-        
         }
             & .restaurants-nouveau {   
                 @include center;          
@@ -244,7 +218,7 @@ h2 {
     &:hover {
         opacity: 1;
         transform: scale(1.1);
-        @include linearGradient;
+        color: $couleur-coeur;
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;

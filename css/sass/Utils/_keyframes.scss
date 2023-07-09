@@ -1,0 +1,30 @@
+@keyframes loader {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 1;
+    }
+    90% {
+        opacity: 0.9;
+      }
+    100% {
+      opacity: 0;
+      display: none;
+    }
+}
+  
+@keyframes loader-element {
+    100% {
+      transform: translateY(-30px);
+    }
+}
+
+@keyframes fadein {
+  from {
+    opacity:0;
+  }
+  to {
+    opacity:1;
+  }
+}

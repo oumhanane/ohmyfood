@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Saliha Ichou",
   "license": "ISC",
   "dependencies": {
     "sass": "^1.62.1"
