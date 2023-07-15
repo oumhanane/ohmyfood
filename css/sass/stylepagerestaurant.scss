@@ -65,7 +65,7 @@ body {
     &:hover {
         opacity: 1;
         transform: scale(1.1);
-        color: $couleur-coeur;
+        @include linearGradient;
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -251,7 +251,7 @@ h2 {
             }
         }
     }
-    
+
     .container-footer {
         margin-top: 0;
     }
