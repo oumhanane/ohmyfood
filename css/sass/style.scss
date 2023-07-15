@@ -154,10 +154,6 @@ h2 {
 .restaurants {
     @include center;
     @include column;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-    // align-items: center;
     background-color: $restaurant-background;
     padding-bottom: 60px;
         & img {
@@ -171,9 +167,6 @@ h2 {
 }
 .card-restaurant {
     @include column;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content:center;
     width: 90%;
     background-color: white;
     border-radius: 20px;
